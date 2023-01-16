@@ -21,6 +21,6 @@ jobs:
     - name: add miri
       run: rustup +nightly component add miri
     - name: run tests
-      run: cargo miri test -j16 --verbose --all-features
+      run: cargo miri test
     - name: Run bench
-      run: cargo bench -j16
+      run: cargo bench
