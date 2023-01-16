@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: add miri
-      run: rustup component add miri
+      run: rustup +nightly component add miri
     - name: run tests
       run: cargo miri test -j16 --verbose --all-features
     - name: Run bench
